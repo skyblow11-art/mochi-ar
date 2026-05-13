@@ -9,12 +9,26 @@
     body { margin: 0; background: #000; }
     model-viewer {
       width: 100vw;
-      height: 100vh;
+      height: 80vh;
+    }
+    #ar-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 30px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
   <model-viewer
+    id="viewer"
     src="mochi.glb"
     ar
     ar-modes="scene-viewer webxr"
@@ -22,6 +36,7 @@
     auto-rotate
     shadow-intensity="1"
     alt="もちちゃん">
+    <button slot="ar-button" id="ar-button">🌸 ARで召喚する</button>
   </model-viewer>
 </body>
 </html>
