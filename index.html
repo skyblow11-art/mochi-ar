@@ -11,6 +11,18 @@
       width: 100vw;
       height: 100vh;
     }
+    #ar-btn {
+      position: fixed;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: pink;
+      border: none;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 30px;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -22,7 +34,7 @@
     auto-rotate
     shadow-intensity="1"
     alt="もちちゃん">
-    <button slot="ar-button" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:pink;border:none;padding:16px 32px;font-size:18px;border-radius:30px;">🌸 ARで召喚</button>
+    <button slot="ar-button" id="ar-btn">🌸 ARで召喚</button>
   </model-viewer>
 </body>
 </html>
